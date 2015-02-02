@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!-- This file is part translate module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Icon -->
+        <record model="ir.ui.icon" id="translate_icon">
+            <field name="name">tryton-translate</field>
+            <field name="path">icons/tryton-translate.svg</field>
+        </record>
+
+        <!-- Main Menu -->
+        <menuitem name="Translate" id="translate_menu"
+            parent="ir.menu_administration" icon="tryton-translate"/>
+
+        <!-- translate -->
+        <record id="view_translate_tree" model="ir.ui.view">
+            <field name="model">translate.translate</field>
+            <field name="type">tree</field>
+            <field name="name">translate_tree</field>
+        </record>
+        <record id="view_translate_form" model="ir.ui.view">
+            <field name="model">translate.translate</field>
+            <field name="type">form</field>
+            <field name="name">translate_form</field>
+        </record>
+        <record model="ir.action.act_window" id="action_translate_view">
+            <field name="name">Translate</field>
+            <field name="res_model">translate.translate</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_translate_view_list">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_translate_tree"/>
+            <field name="act_window" ref="action_translate_view"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_translate_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="view_translate_form"/>
+            <field name="act_window" ref="action_translate_view"/>
+        </record>
+
+        <record model="ir.ui.view" id="view_translate_wizard_start">
+            <field name="model">translate.wizard.start</field>
+            <field name="type">form</field>
+            <field name="name">translate_wizard_start</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_translate">
+            <field name="name">Translate</field>
+            <field name="wiz_name">translate.wizard</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_translate_wizard_translation">
+            <field name="model">translate.wizard.translation</field>
+            <field name="type">form</field>
+            <field name="name">translate_wizard_translation</field>
+        </record>
+
+        <!-- Access -->
+        <record model="ir.model.access" id="access_translate">
+            <field name="model" search="[('model', '=', 'translate.translate')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_translate_admin">
+            <field name="model" search="[('model', '=', 'translate.translate')]"/>
+            <field name="group" ref="res.group_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <menuitem action="action_translate_view"
+            id="menu_translate"
+            parent="translate_menu"/>
+    </data>
+</tryton>
