@@ -153,6 +153,14 @@ class TranslateWizardTranslation(ModelView):
     __name__ = 'translate.wizard.translation'
 
     @classmethod
+    def __setup__(cls):
+        super(TranslateWizardTranslation, cls).__setup__()
+        cls._error_messages.update({
+                'no_translation_found':
+                    'No translation found for field %s.',
+                })
+
+    @classmethod
     def fields_view_get(cls, view_id=None, view_type='form'):
         pool = Pool()
         Translate = pool.get('translate.translate')
@@ -242,8 +250,8 @@ class TranslateWizardTranslation(ModelView):
         res['fields'] = fields
         return res
 
-    @staticmethod
-    def get_translation(translator, text, source_lang, target_lang):
+    @classmethod
+    def get_translation(cls, translator, text, source_lang, target_lang):
         if translator:
             translate = getattr(cls, 'get_translation_from_%s' % translator)
             return translate(text, source_lang, target_lang)
@@ -265,13 +273,17 @@ class TranslateWizardTranslation(ModelView):
             if field == 'id':
                 continue
             if not field.startswith('translat'):
-                res[field] = Translation.search([
+                resource = Translation.search([
                         ('name', '=', '%s,%s' % (Model.__name__, field)),
                         ('res_id', '=', active_id),
                         ('lang', '=', source_lang),
-                        ], limit=1)[0].value
-                res['translation_%s' % field] = cls.get_translation(translator,
-                    res[field], source_lang, target_lang)
+                        ], limit=1)
+                if not resource:
+                    cls.raise_user_error('no_translation_found',
+                        error_args=(field,))
+                res[field] = resource[0].value
+                res['translation_%s' % field] = cls.get_translation(
+                    translator, res[field], source_lang, target_lang)
             elif field.startswith('translate_'):
                 res[field] = False
         return res
