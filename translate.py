@@ -165,6 +165,9 @@ class TranslateWizardTranslation(ModelView):
         cls._error_messages.update({
                 'no_translation_found':
                     'No translation found for field %s.',
+                'original': 'Original',
+                'translation': 'Translation',
+                'translate': 'Translate',
                 })
 
     @classmethod
@@ -196,19 +199,19 @@ class TranslateWizardTranslation(ModelView):
                 })
         etree.SubElement(xml_group, 'label', {
                 'id': 'label_original',
-                'string': cls.raise_user_error('Original',
+                'string': cls.raise_user_error('original',
                     raise_exception=False),
                 'xalign': '0.0',
                 })
         etree.SubElement(xml_group, 'label', {
                 'id': 'label_translation',
-                'string': cls.raise_user_error('Translation',
+                'string': cls.raise_user_error('translation',
                     raise_exception=False),
                 'xalign': '0.0',
                 })
         etree.SubElement(xml_group, 'label', {
                 'id': 'label_translate',
-                'string': cls.raise_user_error('Translate',
+                'string': cls.raise_user_error('translate',
                         raise_exception=False),
                 'xalign': '0.0',
                 })
