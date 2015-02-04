@@ -1,0 +1,239 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:translate.translate:"
+msgid "Model \"%s\" does not store information to an SQL table."
+msgstr "El model \"%s\" no guarda dades a taula SQL."
+
+msgctxt "error:translate.translate:"
+msgid "Translate must be unique per model."
+msgstr "El traductor ha de ser únic per cada model."
+
+msgctxt "error:translate.translate:"
+msgid "unique_model"
+msgstr "unique_model"
+
+msgctxt "error:translate.wizard.translation:"
+msgid "No translation found for field %s."
+msgstr "No s'han trobat traduccions pels camps %s."
+
+msgctxt "error:translate.wizard.translation:"
+msgid "Original"
+msgstr "Original"
+
+msgctxt "error:translate.wizard.translation:"
+msgid "Translate"
+msgstr "Traduir"
+
+msgctxt "error:translate.wizard.translation:"
+msgid "Translation"
+msgstr "Traducció"
+
+msgctxt "field:translate.configuration,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:translate.configuration,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:translate.configuration,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:translate.configuration,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:translate.configuration,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:translate.configuration,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:translate.translate,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:translate.translate,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:translate.translate,field_domain:"
+msgid "Field Domain"
+msgstr "Camp domini"
+
+msgctxt "field:translate.translate,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:translate.translate,keyword:"
+msgid "Keyword"
+msgstr "Acció de teclat"
+
+msgctxt "field:translate.translate,model:"
+msgid "Model"
+msgstr "Model"
+
+msgctxt "field:translate.translate,model_fields:"
+msgid "Fields"
+msgstr "Camps"
+
+msgctxt "field:translate.translate,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:translate.translate,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:translate.translate,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:translate.translate-ir.model.field,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:translate.translate-ir.model.field,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:translate.translate-ir.model.field,field:"
+msgid "Field"
+msgstr "Camp"
+
+msgctxt "field:translate.translate-ir.model.field,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:translate.translate-ir.model.field,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:translate.translate-ir.model.field,translate:"
+msgid "Translate"
+msgstr "Traducció"
+
+msgctxt "field:translate.translate-ir.model.field,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:translate.translate-ir.model.field,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:translate.wizard.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:translate.wizard.start,source_lang:"
+msgid "Source Language"
+msgstr "Idioma orígen"
+
+msgctxt "field:translate.wizard.start,target_lang:"
+msgid "Target Language"
+msgstr "Idioma destí"
+
+msgctxt "field:translate.wizard.start,translator:"
+msgid "Translator"
+msgstr "Traductor"
+
+msgctxt "field:translate.wizard.translation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "model:ir.action,name:act_translate_configuration_form"
+msgid "Translate Configuration"
+msgstr "Configuració traductor"
+
+msgctxt "model:ir.action,name:action_translate_view"
+msgid "Translate"
+msgstr "Traducció"
+
+msgctxt "model:ir.action,name:wizard_translate"
+msgid "Translate"
+msgstr "Traducció"
+
+msgctxt "model:ir.ui.menu,name:menu_configuration"
+msgid "Configuration"
+msgstr "Configuració"
+
+msgctxt "model:ir.ui.menu,name:menu_translate"
+msgid "Translate"
+msgstr "Traductor"
+
+msgctxt "model:ir.ui.menu,name:menu_translate_configuration"
+msgid "Translate Configuration"
+msgstr "Configuració traductor"
+
+msgctxt "model:ir.ui.menu,name:translate_menu"
+msgid "Translate"
+msgstr "Traductor"
+
+msgctxt "model:translate.configuration,name:"
+msgid "Translate Configuration"
+msgstr "Configuració traductor"
+
+msgctxt "model:translate.translate,name:"
+msgid "Translate"
+msgstr "Traducció"
+
+msgctxt "model:translate.translate-ir.model.field,name:"
+msgid "Translate Fields"
+msgstr "Camps a traduir"
+
+msgctxt "model:translate.wizard.start,name:"
+msgid "Translate Wizard Start"
+msgstr "Inicia assistent traductor"
+
+msgctxt "model:translate.wizard.translation,name:"
+msgid "Translate Wizard Translation"
+msgstr "Assistent traductor"
+
+msgctxt "view:translate.configuration:"
+msgid "Translate Configuration"
+msgstr "Configuració traductor"
+
+msgctxt "view:translate.translate:"
+msgid "Create Keyword"
+msgstr "Crea assistent"
+
+msgctxt "view:translate.translate:"
+msgid "Remove Keyword"
+msgstr "Elimina assistent"
+
+msgctxt "view:translate.translate:"
+msgid "Translate"
+msgstr "Traducció"
+
+msgctxt "view:translate.wizard.start:"
+msgid "Translate Wizard"
+msgstr "Assistent traductor"
+
+msgctxt "view:translate.wizard.translation:"
+msgid "Select fields to translate."
+msgstr "Selecciona camps per traduir."
+
+msgctxt "view:translate.wizard.translation:"
+msgid "Translate Wizard"
+msgstr "Assistent traductor"
+
+msgctxt "wizard_button:translate.wizard,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:translate.wizard,start,translate:"
+msgid "Translate"
+msgstr "Traduir"
+
+msgctxt "wizard_button:translate.wizard,translation,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:translate.wizard,translation,update:"
+msgid "Apply"
+msgstr "Realizar"
