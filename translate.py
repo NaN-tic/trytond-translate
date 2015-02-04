@@ -132,7 +132,7 @@ class TranslateWizardStart(ModelView):
         required=True)
     translator = fields.Selection([
             (None, ''),
-            ], 'Translator')
+            ], 'Translator', required=True)
 
     @staticmethod
     def get_lang():
@@ -146,6 +146,13 @@ class TranslateWizardStart(ModelView):
     def default_source_lang():
         context = Transaction().context
         return context['language']
+
+    @classmethod
+    def default_translator(cls):
+        translators = cls.translator.selection
+        if translators:
+            return translators[0][0]
+        return
 
 
 class TranslateWizardTranslation(ModelView):
