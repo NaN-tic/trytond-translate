@@ -168,7 +168,7 @@ msgstr "Traductor"
 
 msgctxt "model:ir.ui.menu,name:menu_translate_configuration"
 msgid "Translate Configuration"
-msgstr "Configuració traductor"
+msgstr "Traductor"
 
 msgctxt "model:ir.ui.menu,name:translate_menu"
 msgid "Translate"
