@@ -213,7 +213,8 @@ class TranslateWizardTranslation(ModelView):
                 'id': 'label_translate',
                 'string': cls.raise_user_error('translate',
                         raise_exception=False),
-                'xalign': '0.0',
+                'xexpand': '0',
+                'width': '25',
                 })
 
         fields.update(Model.fields_get([f.name for f in
@@ -254,6 +255,8 @@ class TranslateWizardTranslation(ModelView):
                     })
             etree.SubElement(xml_group, 'field', {
                     'name': 'translate_%s' % field.name,
+                    'xexpand': '0',
+                    'width': '25',
                     })
 
         res['arch'] = etree.tostring(root)
