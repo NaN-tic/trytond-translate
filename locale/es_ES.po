@@ -194,6 +194,10 @@ msgctxt "model:translate.wizard.translation,name:"
 msgid "Translate Wizard Translation"
 msgstr "Asistente traducción"
 
+msgctxt "selection:translate.wizard.start,translator:"
+msgid ""
+msgstr ""
+
 msgctxt "view:translate.configuration:"
 msgid "Translate Configuration"
 msgstr "Configuración traductor"
