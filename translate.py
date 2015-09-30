@@ -2,7 +2,7 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from lxml import etree
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pool import Pool
 from trytond.pyson import Bool, Eval, Not, PYSONEncoder
 from trytond.transaction import Transaction
@@ -32,11 +32,12 @@ class Translate(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(Translate, cls).__setup__()
+        t = cls.__table__()
         cls._sql_constraints += [
-            ('model_uniq', 'unique (model)', 'unique_model')
+            ('model_uniq', Unique(t, t.model),
+                'Translate must be unique per model.'),
             ]
         cls._error_messages.update({
-                'unique_model': 'Translate must be unique per model.',
                 'not_modelsql': 'Model "%s" does not store information '
                     'to an SQL table.',
                 })
