@@ -10,10 +10,6 @@ msgctxt "error:translate.translate:"
 msgid "Translate must be unique per model."
 msgstr "El traductor debe ser único por modelo."
 
-msgctxt "error:translate.translate:"
-msgid "unique_model"
-msgstr "unique_model"
-
 msgctxt "error:translate.wizard.translation:"
 msgid "No translation found for field %s."
 msgstr "No se han encontrado traducciones para el campo %s."
